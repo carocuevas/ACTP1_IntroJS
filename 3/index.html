@@ -3,9 +3,13 @@ para cada elemento pedido -->
 
 <!-- Seleccionar el H1 y cambiar el color de text a rojo-->
 <!-- Seleccionar la sección 1 (section-1) y agregar el color de fondo amarillo -->
+
 <!-- Seleccionar el elemennto con clase counter e incrementar en 10 su valor -->
+
 <!-- Seleccionar el elemento con id row-3 y agregar el color de fondo gris, agregar una transición de 1 segundos -->
+
 <!-- Seleccionar el h1 dentro del div y duplicar su tamaño -->
+
 <!-- Seleccionar el último row dentro de la tabla (sin utilizar el id, puesto que el número de elementos podría cambiar) y agregar color de fondo rojo -->
 
 <!DOCTYPE html>
@@ -13,6 +17,17 @@ para cada elemento pedido -->
   <head>
     <meta charset="utf-8">
     <title></title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <style>
+      #row-3 {
+        transition: 1s;
+      }
+      .grey {
+        background-color: grey;
+      }
+    </style>
+
   </head>
   <body>
     <h1> Hey !! </h1>
@@ -20,7 +35,9 @@ para cada elemento pedido -->
       <h1> Hey </h1>
       <span class="counter"> 101 </span>
       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-    </div>
+    </section>
+      
+    </section>>
 
     <table>
       <tbody>
@@ -61,5 +78,23 @@ para cada elemento pedido -->
 
       </fieldset>
     </form>
+
+    <script>
+      $("h1").css("color","red");
+      $("section").css("background-color","yellow");
+      var suma = parseInt($("span").text());
+      $("span").text(suma + 10);
+      $("#row-3").on("click", function(){
+        $("#row-3").addClass("grey");
+      });
+      $(".section-1 h1").on("click", function(){
+        $(".section-1 h1").css("font-size", "3em");
+      });
+      $("#row-4").css("background-color","red");
+    </script>
+
+
+
+
   </body>
 </html>

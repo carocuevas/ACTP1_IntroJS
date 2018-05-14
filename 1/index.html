@@ -8,12 +8,26 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Ejercicio 1</title>
+<style>
+  .red{
+    color: red;
+  }
+</style>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
   </head>
   <body>
     <p> hola </p>
     <script type="text/javascript">
-      $("p").addClass("red");
+      $("p").on("click", function(){
+        $("p").addClass("red");
+      });
+
     </script>
   </body>
 </html>
